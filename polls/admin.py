@@ -21,6 +21,13 @@ class QuestionAdmin(admin.ModelAdmin):
             'fields': ['pub_date'], 'classes': ['collapse']
         }),
     ]
+    # Change the way choices display under questions
+    # Tabular display with 3 extras
     inlines = [ChoiceInline]
+    # Add Date published list filter
+    # Because it's a date time field, django gives it some default filter options
+    list_filter = ['pub_date']
+    # Add search capability
+    search_fields = ['question_text']
 
 admin.site.register(Question, QuestionAdmin)
