@@ -74,6 +74,11 @@ TEMPLATES = [
     },
 ]
 
+# TEMPLATE_LOADERS = (
+#     'hamlpy.template.loaders.HamlPyFilesystemLoader',
+#     'hamlpy.template.loaders.HamlPyAppDirectoriesLoader',
+# )
+
 BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
 
 WSGI_APPLICATION = 'first_django_app.wsgi.application'
